@@ -1,0 +1,22 @@
+* {
+ 	box-sizing: border-box;
+ }
+
+body {
+  font-family: "inter", sans-serif;
+  margin: 0;
+  width: 300px;
+  height: 200px;
+  user-select: none;
+  -webkit-app-region: drag;
+
+}
+
+.app{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
