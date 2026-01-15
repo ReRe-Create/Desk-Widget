@@ -1,8 +1,7 @@
 function DateComponent() {
     const now = new Date();
     const day = now.getDate();
-    const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    const monthName = month[now.getMonth()];
+    const monthName = now.toLocaleString("default", { month: "long" });
     const year = now.getFullYear();
 
     return (
