@@ -29,12 +29,14 @@
 import { createRoot } from 'react-dom/client';
 import Timecomponent from './components/time.jsx';
 import DateComponent from "./components/DateComponent.jsx";
+import Weathercomponent from './components/weather.jsx';
 
 const App = () => {
   return (
     <div>
       <Timecomponent/>
       <DateComponent />
+      <Weathercomponent />
 </div>
 );
 }
