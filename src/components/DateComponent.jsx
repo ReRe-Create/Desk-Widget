@@ -1,12 +1,24 @@
+import { useState, useEffect} from "react";
+import "/src/CSS/index.css";
+
 function DateComponent() {
-    const now = new Date();
+    const [now, setNow] = useState(new Date());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setNow(new Date());
+            
+        }, 60000); // Update every minute
+        return () => clearInterval(interval);
+    }, []);
+
     const day = now.getDate();
-    const monthName = now.toLocaleString("default", { month: "long" });
+    const month = now.toLocaleString("default", { month: "long" });
     const year = now.getFullYear();
 
     return (
-        <div id="date">
-            <h2>{day} {monthName}, {year}</h2>
+        <div className="date">
+            <h3>{day} {month}, {year}</h3>
         </div>
     );
 }
